@@ -20,8 +20,14 @@
   a { color:var(--emerald-d); }
 
   /* ---------- hero ---------- */
-  .hero { background:var(--navy); color:var(--white); padding:56px 0 44px; }
+  .hero { background:var(--navy); color:var(--white); padding:56px 0 44px; position:relative; }
   .hero .kicker-top { font-size:0.8rem; font-weight:700; letter-spacing:2px; color:#8FD9BE; text-transform:uppercase; margin:0 0 10px; }
+  .pdf-link { position:absolute; top:24px; right:24px; display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:16px;
+    background:#16305A; border:1px solid #2C4A7C; color:var(--white); text-decoration:none; font-size:0.85rem; font-weight:700; }
+  .pdf-link:hover { border-color:#5FE3B4; color:#8FD9BE; }
+  @media (max-width:760px) {
+    .pdf-link { position:static; margin:0 0 16px; }
+  }
   .hero h1 { font-size:clamp(2rem, 5vw, 2.9rem); margin:0 0 10px; line-height:1.1; }
   .hero p.sub { font-size:1.05rem; color:#C7D3E8; margin:0 0 22px; }
   .hero .chip { display:inline-block; background:#16305A; border:1px solid #2C4A7C; border-radius:24px;
@@ -145,6 +151,7 @@
 <body>
 
 <header class="hero">
+  <a class="pdf-link" href="Retire_on_Your_Terms.pdf">&#8681;&nbsp; Download the print-friendly PDF</a>
   <div class="wrap">
     <p class="kicker-top">A Guide for Teens, Twenties &amp; Thirties</p>
     <h1>Retire on Your Terms</h1>
